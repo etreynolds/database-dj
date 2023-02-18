@@ -109,6 +109,15 @@ SELECT first_name, last_name, COUNT(title) as num_of_movies FROM movies m
 
 11. The title of every movie along with the number of stars in
     that movie, in descending order by the number of stars.
+```sql
+SELECT title, COUNT(first_name) as stars FROM movies m
+  JOIN roles r
+  ON m.id = r.movie_id
+  JOIN stars s
+  ON r.star_id = s.id
+  GROUP BY title
+  ORDER BY stars DESC;
+```
 
 12. The first name, last name, and average runtime of the five
     stars whose movies have the longest average.
