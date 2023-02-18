@@ -83,7 +83,12 @@ SELECT first_name, last_name, title FROM movies
 9.  The first and last names of every star who has been in a G-rated movie. The first and last name should appear only once for each star, even if they are in several G-rated movies. *IMPORTANT NOTE*: it's possible that there can be two *different* actors with the same name, so make sure your solution accounts for that.
 
 ```sql
-SELECT first_name, last_name, title FROM movies JOIN roles ON movies.id = roles.movie_id JOIN stars ON roles.star_id = stars.id WHERE rating = 'G';
+SELECT first_name, last_name, title FROM movies
+  JOIN roles
+  ON movies.id = roles.movie_id
+  JOIN stars
+  ON roles.star_id = stars.id
+  WHERE rating = 'G';
 ```
 
 10. The first and last names of every star along with the number
