@@ -17,6 +17,10 @@ Using the `movies_db` database, write the correct SQL queries for each of these 
 
 1.  The title of every movie.
 
+```sql
+SELECT title FROM movies;
+```
+
 2.  All information on the G-rated movies.
 
 3.  The title and release year of every movie, ordered with the
